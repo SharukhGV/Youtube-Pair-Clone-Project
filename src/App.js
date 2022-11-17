@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { useEffect,useState } from 'react';
 function App() {
+  // const[data, setData] = useState([])
+useEffect(()=>{
+  fetch(
+    `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
+  ).then(response=> response.json()).then(data=> setData(data))
+},[])
+  
+console.log(data)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  {/* {data.forEach(element=>{element.map((dat)=>{
+    
+    return(
+      <p key={dat}>{dat}</p>
+    )
+    
+    })})} */}
     </div>
   );
 }
