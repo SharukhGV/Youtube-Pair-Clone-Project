@@ -1,24 +1,31 @@
 import './App.css';
 import { useEffect,useState } from 'react';
+import {BrowserRouter as Router, Routes,Route, Link} from "react-router-dom"
+import Sidebar from './Components/Sidebar';
+import Categories from './Components/Categories';
+
+import Nav from './Components/Nav';
+import About from './Components/About';
+import Home from './Components/Home';
+import VideoCard from './Components/VideoCard';
+import Video from './Components/Video';
+import Videos from './Components/Videos';
+import Search from './Components/Search';
+
 function App() {
-  // const[data, setData] = useState([])
-useEffect(()=>{
-  fetch(
-    `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
-  ).then(response=> response.json()).then(data=> setData(data))
-},[])
-  
-console.log(data)
+ 
   return (
-    <div className="App">
-  {/* {data.forEach(element=>{element.map((dat)=>{
+  <Router className="display">
+    <Nav />
+  
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />}/>
+     <Route path="/video/:id" element={<Video  />} />
     
-    return(
-      <p key={dat}>{dat}</p>
-    )
-    
-    })})} */}
-    </div>
+
+    </Routes>
+  </Router>
   );
 }
 

@@ -36,3 +36,72 @@
     transform: rotate(360deg);
   }
 }
+
+.Navbar{
+  display:grid;
+  align-items: center;
+  grid-template-columns: 15% 70% 15%;
+  background-color:red;
+  color:white;
+}
+.Nav-links{
+  grid-column:3/4;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+.about-page{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-color: red;
+ align-items: center;
+ justify-items: center;
+}
+.about-details{
+  grid-column: 2/3;
+  background-color: pink;
+ 
+}
+.about{
+  background-color: black;
+}
+.search-form{
+
+text-align: center;
+margin-top:25px;
+margin-bottom:25px;
+}
+#search-bar{
+  width:350px;
+  height:20px
+}
+.home-page{
+  /* background-color: black; */
+}
+
+.video-card{
+  border:1px solid black;
+  border-radius: 17px;
+}
+.videos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 5px;
+  column-gap: 5px;
+  margin-top: 50px;
+}
+.categories{
+  text-align: center;
+  display:inline-block;
+  float:right;
+  margin-right:25px;
+  padding-right: 25px;
+  flex-wrap: wrap;
+  
+
+  
+}
+.thumb{
+  width: 100%;
+  border-radius: 17px;
+}
