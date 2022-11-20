@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import VideoCard from "./VideoCard"
 import Videos from "./Videos"
 import Categories from "./Categories"
-import { Navigate, useNavigate, useParams } from "react-router-dom"
+import { useNavigate  } from "react-router-dom"
 
 
 
