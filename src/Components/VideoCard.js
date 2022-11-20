@@ -11,7 +11,7 @@ export default function VideoCard({videoDetails}){
     
     {videoDetails ? <div className="video-card">
             <img src={videoDetails.snippet.thumbnails.medium.url} alt="pic" className="thumb"/>
-            <h4>{videoDetails.snippet.title}</h4>
+            <h4 className="vid-title">{videoDetails.snippet.title.slice(0,50)}</h4>
             <p>{videoDetails.snippet.chanelTitle}</p>
             {/* <p>{videoDetails.snippet.description.slice(0,60)}</p> */}
         </div>: null }

@@ -37,7 +37,7 @@ export default function Search (){
         <div>
             <section>
         <form className="search-form" onSubmit={submit}>
-            <input type="text" value={input} id="search-bar" onChange={handleChange}/>
+            <input type="text" value={input} id="search-bar" onChange={handleChange} required/>
             <input type="submit" value="Submit" id="search-submit"  className="search-submit"/>
         </form >
         
