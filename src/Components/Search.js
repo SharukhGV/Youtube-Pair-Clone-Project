@@ -1,15 +1,12 @@
-import { useEffect, useState } from "react"
-import VideoCard from "./VideoCard"
+import {  useState } from "react"
 import Videos from "./Videos"
 import Categories from "./Categories"
-import { useNavigate  } from "react-router-dom"
 
 
 
 
 export default function Search (){
  const [data,setData]=useState([])
- const navigate=useNavigate()
   
  function getData(){
     fetch(
