@@ -7,16 +7,16 @@ export default function VideoCard({videoDetails}){
     const navigate=useNavigate()
 
    return   ( 
-    // <div onClick={()=>navigate(`/video/${videoDetails.id.videoId}`)} >
-    <div>
+    <div onClick={()=>navigate(`/video/${videoDetails.id.videoId}`)} >
+    
     {videoDetails ? <div className="video-card">
-            <img src={videoDetails.snippet.thumbnails.default.url} alt="pic" className="thumb"/>
+            <img src={videoDetails.snippet.thumbnails.medium.url} alt="pic" className="thumb"/>
             <h4>{videoDetails.snippet.title}</h4>
             <p>{videoDetails.snippet.chanelTitle}</p>
-            <p>{videoDetails.snippet.description.slice(0,60)}</p>
+            {/* <p>{videoDetails.snippet.description.slice(0,60)}</p> */}
         </div>: null }
         
         </div>
   )
-    
+
 }

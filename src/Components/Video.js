@@ -12,5 +12,20 @@ export default function Video(){
           autoplay: 1,
         },
       };
-    return <YouTube videoId={id}   />;
+    return (
+    <div>
+        <YouTube videoId={id} />
+        <form>
+            <label for="name">Name:
+            <input type="text" id="name" value=""/>
+            </label>
+            <label for ="comment">Comment:
+            <input type="text" id="comment" value=""/>
+            </label>
+        </form>
+        <h3>Comments</h3>
+    </div>
+    )
 }
+
+

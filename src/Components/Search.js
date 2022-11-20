@@ -22,7 +22,7 @@ export default function Search (){
     function submit(e){
         e.preventDefault()
         getData()
-        // navigate(`/search/${input}`)
+        
     }
 
     
@@ -38,7 +38,7 @@ export default function Search (){
             <section>
         <form className="search-form" onSubmit={submit}>
             <input type="text" value={input} id="search-bar" onChange={handleChange}/>
-            <input type="submit" value="Submit" id="search-submit" />
+            <input type="submit" value="Submit" id="search-submit"  className="search-submit"/>
         </form >
         
     <Categories setData={setData}/>

@@ -15,9 +15,10 @@ import Search from './Components/Search';
 function App() {
  
   return (
+    
   <Router className="display">
     <Nav />
-  
+    
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />}/>
@@ -30,3 +31,5 @@ function App() {
 }
 
 export default App;
+
+
