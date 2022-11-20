@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
-import Search from "./Search";
-import Videos from "./Videos"; 
+
+
 
 
 
@@ -26,7 +25,7 @@ useEffect(()=>{ fetch(
         <div className="categories">
        
          {categories.filter(cat=>cat.snippet.assignable).map(category=>(
-            <button className="cat-btn" onClick={()=>{ getCatData(category.id)}}>{category.snippet.title}</button>
+            <button key={category.snippet.title} className="cat-btn" onClick={()=>{ getCatData(category.id)}}>{category.snippet.title}</button>
             
             
             ))} 

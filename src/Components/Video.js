@@ -1,7 +1,7 @@
-import { useParams,useNavigate, } from "react-router-dom";
-import YouTube, { YouTubeProps } from 'react-youtube';
+import { useParams } from "react-router-dom";
+import YouTube from 'react-youtube';
 import React, { useState } from "react";
-import Sidebar from "./Sidebar";
+
 
 export default function Video(){
     const {id}=useParams()
