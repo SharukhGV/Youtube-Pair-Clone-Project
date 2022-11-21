@@ -131,12 +131,13 @@ grid-column: 2/3;
 }
 .categories{
   text-align: center;
-  display:flex;
-  float:right;
+ 
+ 
   margin-right:25px;
   padding-right: 25px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   overflow-x:scroll;
+  white-space: nowrap;
   
 
   
