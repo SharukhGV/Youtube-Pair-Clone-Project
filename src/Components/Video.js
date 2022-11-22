@@ -19,6 +19,14 @@ export default function Video(){
         width: "100%",
         border:"1px solid red"
       };
+    // const opts = {
+    //     height: '390',
+    //     width: '640',
+    //     playerVars: {
+    //       // https://developers.google.com/youtube/player_parameters
+    //       autoplay: 1,
+    //     },
+    //   };
 
       useEffect(()=>{
         fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${process.env.REACT_APP_API_KEY}` 
