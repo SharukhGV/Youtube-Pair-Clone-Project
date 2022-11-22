@@ -1,6 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Routes,Route} from "react-router-dom"
-
+import {BrowserRouter as Router, Routes,Route, } from "react-router-dom"
 
 import Nav from './Components/Nav';
 import About from './Components/About';
@@ -19,7 +18,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about/" element={<About />}/>
      <Route path="/video/:id" element={<Video  />} />
-    
+    <Route path="/category/:category" element={<Home/>} />
 
     </Routes>
   </Router>
