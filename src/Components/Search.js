@@ -1,25 +1,30 @@
 import {  useState } from "react"
+
 import Videos from "./Videos"
 import Categories from "./Categories"
 
 
 
 
+
+export default function Search ({setVidData,setVidType}){
+
+
 export default function Search (){
  const [data,setData]=useState([])
   
+
  function getData(){
     fetch(
         `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${input}&maxResults=20&key=${process.env.REACT_APP_API_KEY}`
-      ).then(response=> response.json()).then(data=>setData(data.items))
-      console.log(data)
+      ).then(response=> response.json()).then(data=>setVidData(data.items))
       setInput("")
 
  }
     function submit(e){
         e.preventDefault()
         getData()
-        
+        setVidType(`${input}`)
     }
 
     
@@ -38,10 +43,10 @@ export default function Search (){
             <input type="submit" value="Submit" id="search-submit"  className="search-submit"/>
         </form >
         
-    <Categories setData={setData}/>
+   
         </section>
+        <p className="testinfo">Test information</p>
         
-        <Videos data={data} />
         </div>
     )
 }

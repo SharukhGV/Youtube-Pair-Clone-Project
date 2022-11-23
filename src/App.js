@@ -2,12 +2,15 @@ import './App.css';
 import {BrowserRouter as Router, Routes,Route} from "react-router-dom"
 
 // import Nav from './Components/Nav';
+
+import {BrowserRouter as Router, Routes,Route, } from "react-router-dom"
+
+import Nav from './Components/Nav';
 import About from './Components/About';
 import Home from './Components/Home';
 import Video from './Components/Video';
 import Login from './Components/Login';
 import SignUp from './Components/SignUp';
-// import Origin from './Components/Origin';
 
 //basics on what to require to enable site proper functionality. make sure you did npm init, nppm i express,  and npm install passport-local
 
@@ -94,12 +97,14 @@ function App() {
   <Router className="display">    
     <Routes>
 
-    {/* <Route path="/" element={<Origin />}/> */}
+
       <Route path="/home" element={<Home />} />
       <Route path="/about/" element={<About />}/>
      <Route path="/home/video/:id" element={<Video  />} />
     <Route path="/" element={<Login />} />
     <Route path="/signup" element={<SignUp />}/>
+        <Route path="/home/category/:category" element={<Home/>} />
+
     </Routes>
   </Router>
   );

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Categories({ setData }) {
   const [categories, setCategories] = useState([]);
@@ -42,3 +43,7 @@ export default function Categories({ setData }) {
     </div>
   );
 }
+
+
+
+
