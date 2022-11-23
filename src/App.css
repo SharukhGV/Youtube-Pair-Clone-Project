@@ -396,3 +396,6 @@ padding-left: 15px;
   display: grid;
   row-gap: 15px;
 }
+.trial{
+  display:grid;
+}
