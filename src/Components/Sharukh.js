@@ -29,6 +29,9 @@ export default function Sharukh() {
 
 
       <div>
+
+      <p>hi</p>
+        <h1></h1>
       </div>
       <div className="Sharukh-dropdown">
         <select className="form-select" value={details} onChange={handleOnChange}>

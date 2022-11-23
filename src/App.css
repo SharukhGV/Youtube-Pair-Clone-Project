@@ -395,4 +395,8 @@ padding-left: 15px;
 .comm-ul{
   display: grid;
   row-gap: 15px;
+
+}
+.trial4{
+  display:grid;
 }

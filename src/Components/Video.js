@@ -53,6 +53,9 @@ setForm({...form,[e.target.id]:""})
 }
 
     return (
+
+    <div >
+        
         <div className="video-page">
            <div className="related-sidebar">
             <Sidebar/>
