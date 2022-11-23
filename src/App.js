@@ -7,10 +7,9 @@ import Categories from './Components/Categories';
 import Nav from './Components/Nav';
 import About from './Components/About';
 import Home from './Components/Home';
-import VideoCard from './Components/VideoCard';
+
 import Video from './Components/Video';
-import Videos from './Components/Videos';
-import Search from './Components/Search';
+
 
 function App() {
  

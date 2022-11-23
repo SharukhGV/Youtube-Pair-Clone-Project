@@ -24,9 +24,9 @@ useEffect(()=>{ fetch(
       
         <div className="categories">
        
+            <p>hi</p>
          {categories.filter(cat=>cat.snippet.assignable).map(category=>(
             <button key={category.snippet.title} className="cat-btn" onClick={()=>{ getCatData(category.id)}}>{category.snippet.title}</button>
-            
             
             ))} 
            

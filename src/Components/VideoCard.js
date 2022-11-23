@@ -15,7 +15,7 @@ export default function VideoCard({videoDetails}){
             <p>{videoDetails.snippet.chanelTitle}</p>
             {/* <p>{videoDetails.snippet.description.slice(0,60)}</p> */}
         </div>: null }
-        
+        <p>hi</p>
         </div>
   )
 

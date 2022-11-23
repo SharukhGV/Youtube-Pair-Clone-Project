@@ -8,6 +8,7 @@ export default function Sidebar(){
 return (
     
         <div className="sidebar">
+            <p>hi</p>
          <ul>
          <li className='sidebar-li'> <HomeIcon /><p>Home</p></li>
          <li className='sidebar-li'> <SubscriptionsIcon/><p>Subscriptions</p></li>
