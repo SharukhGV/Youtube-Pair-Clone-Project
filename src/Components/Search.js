@@ -1,11 +1,18 @@
 import {  useState } from "react"
 
+import Videos from "./Videos"
+import Categories from "./Categories"
 
 
 
 
 
 export default function Search ({setVidData,setVidType}){
+
+
+export default function Search (){
+ const [data,setData]=useState([])
+  
 
  function getData(){
     fetch(

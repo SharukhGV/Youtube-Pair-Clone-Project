@@ -7,7 +7,7 @@ return (
    
     <div className="videos">
         
-        {data.map((video,idx)=><VideoCard videoDetails={video}/>)}
+        {data.map((video,idx)=><div key={idx}><VideoCard  videoDetails={video}/></div>)}
     </div>
 )
 }

@@ -5,7 +5,7 @@ import Videos from "./Videos";
 import Categories from "./Categories";
 import Sidebar from "./Sidebar";
 import { useEffect, useState } from "react";
-
+import Nav from "./Nav";
 
 
 export default function Home(){
@@ -17,8 +17,13 @@ fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDe
 },[])
 
     return (
+
+        <div>
+                            <Nav />
+
+        
         <div className="home-page">
-            
+
           <Sidebar/>
           <div className="search-cat">
             <Search setVidData={setVidData} setVidType={setVidType}/>
@@ -28,5 +33,5 @@ fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDe
             <Videos data={vidData}/>
           
         </div>
-    )
+   </div> )
 }

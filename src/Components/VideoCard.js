@@ -2,12 +2,13 @@
 import {  useNavigate, } from "react-router-dom"
 
 
-export default function VideoCard({videoDetails}){
+export default function VideoCard({ videoDetails}){
 
     const navigate=useNavigate()
 
    return   ( 
-    <div onClick={()=>{navigate(`/video/${videoDetails.id.videoId||videoDetails.id}`);}} >
+    <div onClick={()=>navigate(`/home/video/${videoDetails.id.videoId||videoDetails.id}`)} >
+
     
     {videoDetails ? <div className="video-card">
             <img src={videoDetails.snippet.thumbnails.medium.url} alt="pic" className="thumb"/>
