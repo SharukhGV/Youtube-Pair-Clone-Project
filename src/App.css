@@ -298,6 +298,7 @@ body{
   border-radius: 20px;
   padding-left: 10px;
   margin-left:5px;
+  padding-bottom: 10px;
   
 }
 .x{
@@ -322,18 +323,24 @@ padding-left: 20px;
 }
 .comments-li{
   list-style-type:none;
+  /* border:1px solid black;
+  border-radius: 12px;
+  padding:0px, 10px; */
+  margin-top: -3px;
+  padding-left: 10px;
 }
 .comments-div{
-  border:1px solid black;
+  /* border:1px solid black; */
   margin:0px 20px;
   margin-bottom: 20px;
+  
  
 }
 .relatedVidsCard{
   background-color: white;
   display:grid;
   grid-template-columns: 1fr 1fr;
-  border:1px solid black;
+  border:1px solid white;
   row-gap: 10px;
   
 }
@@ -372,10 +379,20 @@ padding-left: 15px;
 }
 #name{
   margin-left:35px;
+  width:200px
 }
 #comment{
   margin-left:7px;
+  width:200px;
 }
 .related-sidebar{
   margin-top: 85px;
+}
+.comm-sty{
+  border:1px solid black;
+  border-radius: 12px;
+}
+.comm-ul{
+  display: grid;
+  row-gap: 15px;
 }

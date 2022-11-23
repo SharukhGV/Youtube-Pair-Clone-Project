@@ -10,7 +10,7 @@ export default function Video(){
     const [info,setInfo]=useState([])
     const [stats,setStats]=useState([])
     const [relatedVids,setRelatedVids]=useState([])
-    
+    const [comments,setComments]=useState([])
 
 
     const {id}=useParams()
@@ -23,16 +23,16 @@ export default function Video(){
       useEffect(()=>{
         fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${process.env.REACT_APP_API_KEY}` 
         ).then(res=>res.json()).then(data=>setInfo(data.items[0].snippet))
-      },[])
+      },[id])
 
       useEffect(()=>{
        fetch(` https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${id}&key=${process.env.REACT_APP_API_KEY}`).then(res=>res.json()).then(stats=>setStats(stats.items[0].statistics))
-      },[])
+      },[id])
 
       useEffect(()=>{
         fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${id}&type=video&maxResults=12&key=${process.env.REACT_APP_API_KEY}
         `).then(res=>res.json()).then(videos=>setRelatedVids(videos.items))
-      },[])
+      },[id])
 
 console.log(relatedVids)
      
@@ -45,8 +45,11 @@ function handleChange(e){
 
 function onSubmit(e){
 e.preventDefault()
+comments.push(form)
+setComments(comments)
+console.log(comments)
+setForm({...form,[e.target.id]:""})
 
-// return (<Comments name={form.name} comment={form.comment}/>)
 }
 
     return (
@@ -69,7 +72,7 @@ e.preventDefault()
         
 
         <div className="x">
-        <form className="comments-form" onSubmit={()=>onSubmit}>
+        <form className="comments-form" onSubmit={onSubmit}>
         <h3>Leave a comment</h3>
             <label for="name" className="name-label">Name:
             <input type="text" id="name" value={form.name} onChange={handleChange}/>
@@ -84,7 +87,7 @@ e.preventDefault()
         
         <div className="cmmts-section">
         <h3>Comments</h3>
-      <Comments name={form.name} comment={form.comment}/>
+      <Comments comments={comments}/>
     </div>
     </div>
     <div className="RV-section">

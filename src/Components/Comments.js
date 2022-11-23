@@ -1,11 +1,16 @@
-export default function Comments({name,comment}){
+export default function Comments({comments}){
 return (
     <div className="comments-div">
-        <ul>
+        <ul className="comm-ul">
+            {comments.map(comment=>(
             <li className="comments-li">
-                <p>{name}</p>
-                <p>{comment}</p>
+                <div className="comm-sty">
+                <p>@{comment.name}</p>
+                <p>{comment.comment}</p>
+                </div>
             </li>
+            )
+            )}
         </ul>
     </div>
 )
